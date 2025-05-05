@@ -4,7 +4,7 @@
   "author": "Ivor Reic",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec ts-node --files src/index.ts",
+    "start": "nodemon --exec npx ts-node --files src/index.ts",
     "start:test": "cross-env NODE_ENV='test' DB_DATABASE='jira_test' npm start",
     "start:production": "pm2 start --name 'jira_api' node -- -r ./tsconfig-paths.js build/index.js",
     "build": "cd src && tsc",
@@ -16,10 +16,11 @@
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "faker": "^4.1.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.15",
     "module-alias": "^2.2.2",
-    "pg": "^7.14.0",
+    "pg": "^8.15.6",
+    "pm2": "^6.0.5",
     "reflect-metadata": "^0.1.13",
     "striptags": "^3.1.1",
     "typeorm": "^0.2.20"
@@ -43,7 +44,7 @@
     "lint-staged": "^9.4.3",
     "nodemon": "^2.0.0",
     "prettier": "^1.19.1",
-    "ts-node": "^8.5.2",
+    "ts-node": "^8.10.2",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.7.2"
   },
